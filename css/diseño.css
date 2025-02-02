@@ -1,0 +1,960 @@
+:root{
+    --tipografia: "Radio Canada", serif;
+    --color-primario: #22485B;
+    --color-secundario: #809D4D;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: var(--tipografia);   /*tipografia*/
+    font-weight: 700;                     /*grosor de la letra*/
+    font-size: 40px;
+}
+
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    margin: 0;
+    background-color: var(--color-primario);
+}
+
+button, .boton {
+    font-family: var(--tipografia);    /*tipografia*/
+    font-weight: 600;                 /*grosor de la tipografia*/
+    font-size: 20px;             /*tamaño de la tipografia*/
+
+    padding: 0.8rem;                           /*espacio dentro del boton*/
+    background-color: var(--color-secundario);              /*fondo*/
+    color: white;                                /*color del texto*/
+    border: none;                           /*sin borde*/
+    border-radius: 10px;                  /*esquinas redondeadas*/
+    text-decoration: none;           /*sin decoracion*/
+    cursor: pointer;
+    
+}
+
+button:hover,
+.boton:hover{
+    transform: scale(1.04);                          /*el boton se escala mas grande o se agranda cuando el puntero este sobre el*/
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);    /*sombra*/
+}
+
+
+
+
+
+main section h2 {
+    margin: 0;
+}
+
+
+
+.fondo{          /*se repite en todas las secciones*/
+    background-image: url(../imagenes/animales-fondo-bajaopacidad.png);
+    background-color: var(--color-primario);
+    background-size: cover; 
+    background-position: center; /* Centra la imagen */
+    padding: 20px;
+    color: white;
+}
+
+.fondo h2{
+    text-align: center;    /*texto centrado*/
+    margin-top: 100px;      /*margin arriba y abajo*/
+    margin-bottom: 200px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*---MENU---*/
+
+header{
+    background-color: var(--color-primario);    /*fondo*/
+}
+
+/*con mas especificidad las clases de bootstrap*/
+
+header .navbar .navbar-brand {
+    color: white; 
+    font-size: 35px;
+}
+
+
+header .navbar .navbar-nav .nav-link {
+    color: white; 
+    text-decoration: none; 
+    font-family: var(--tipografia); /* tipografía*/
+    font-weight: 500; /* grosor*/
+    text-align: left; /* alineación del texto a la izquierda*/
+    padding: 0.9rem; 
+    font-size: 18px; /*tamaño de la letra*/
+}
+
+header .navbar .navbar-nav .nav-link:hover {
+    transform: scale(1.04);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+header .navbar .navbar-toggler {
+    border: 2px solid white; /* Color del borde del botón navbar */
+}
+
+
+
+header .navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /*tres lineas blancas*/
+}
+
+header .navbar .navbar-toggler:focus,
+header .navbar .navbar-toggler:active{
+    outline: none;                       /*elimina el contorno*/
+    box-shadow: none;                  /*elimina la sombra que viene de bootstrap*/
+}
+
+
+
+
+
+
+/*---INICIO---*/
+
+.inicio {
+    width: 100%;
+    height: 40rem;
+
+    text-align: center;
+    background-image: url(../imagenes/animales-fondo-bajaopacidad.png);   /*un fondo con la imagen principal*/
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: 50%;   /*enfoca a la imagen mas en el centro*/
+    background-color: var(--color-primario);
+}
+
+.texto-inicio{
+    margin: 0 auto;
+    max-width: 700px;       /* el máximo del ancho de texto-inicial*/
+    text-align: center;        /* un texto centrado*/
+    padding: 2rem;
+    padding-top: 20rem;
+    
+}
+
+.texto-inicio h2{
+    font-family: var(--tipografia);
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+}
+
+.texto-inicio p{
+    font-family: var(--tipografia);
+    font-weight: 350;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.texto-inicio a{
+    padding: 1rem 5rem 1rem 5rem
+}
+
+
+/*INICIO RESPONSIVE*/
+
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 425px){
+    .texto-inicio{
+        padding-top: 10rem;
+    }
+    .texto-inicio h2{
+        font-size: 40px; 
+    }
+    .texto-inicio p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:320px){
+    .texto-inicio h2{
+        font-size: 30px; 
+    }
+    .texto-inicio p{
+        font-size: 14px;
+    }
+    .texto-inicio a{
+        font-size: 18px;
+        padding: 1rem 2rem 1rem 2rem;
+    }
+}
+
+
+
+/*---TIENDA---*/
+
+
+.tienda{
+    margin-bottom: 10rem ;
+}
+
+.tienda h2{
+    font-family: var(--tipografia);
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+}
+
+.producto p{
+    font-family: var(--tipografia);
+    font-weight: 350;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+.productos-tienda{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+
+    margin-top: -80px; /* para que se coloque por encima de la imagen del fondo */
+
+    margin-left: 10rem;            
+    margin-right: 10rem;
+
+}
+
+
+
+.producto {
+   
+    padding: 20px;
+    position: relative;
+    background-color: white;
+    border: 5px solid var(--color-secundario);
+    border-radius: 15px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.producto:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.producto img{
+    width: 100%;
+    height: auto;
+    object-fit: cover; /*la imagen no se distorsione al ajustarse */
+}
+
+
+.producto button{
+    font-size: 20px;
+    border-radius: 10px;
+
+}
+
+
+
+/*TIENDA RESPONSIVE*/
+
+@media (max-width: 768px){
+    .productos-tienda{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .producto{
+        padding: 10px;
+    }
+
+    .producto button{
+        font-size: 15px;
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 425px){
+    .productos-tienda{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1rem;
+        column-gap: 1rem;
+
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .producto p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:320px){
+    
+}
+
+
+
+
+
+
+/*---SERVICIOS---*/
+
+.caja-servicios{
+    margin-bottom: 10rem;
+}
+
+
+.caja-servicios h2{
+    font-family: var(--tipografia);
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+}
+
+
+.lista-servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+
+    margin-top: -80px; 
+
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+
+.lista-servicios h3 {
+    font-family: var(--tipografia);
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+
+}
+
+
+
+.servicio{
+    padding: 20px;
+    position: relative;
+    background-color: white;
+    border: 5px solid var(--color-secundario);
+    border-radius: 15px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+    min-width: 200px;
+    min-height: 100px;
+
+
+}
+
+.servicio:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px black;
+}
+
+
+.servicio img{
+    width: 100%;
+    max-width: 200px;    /*maximo de ancho*/
+    height: auto;
+    object-fit: cover; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.servicio button{
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+
+/*SERVICIO RESPONSIVE*/
+
+@media (max-width: 1024px){
+    .servicio img{
+        width: 90%;
+        max-width: 150px;
+    }
+    .lista-servicios{
+        margin-left: 5rem;
+        margin-right: 5rem;
+
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+}
+
+
+
+@media (max-width: 768px){
+    .servicio{
+        min-width: 100px;
+        min-height: 50px;
+
+        padding: 10px;
+    }
+    .servicio img{
+        max-width: 100px;
+    }
+
+    .lista-servicios h3{
+        font-size: 20px;
+    }
+    .servicio button{
+        font-size: 15px;
+        
+    }
+
+}
+
+@media (max-width: 425px){
+    .lista-servicios{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 1rem;
+
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .servicio button{
+        padding: 8px;
+    }
+}
+
+@media (max-width:320px){
+    
+}
+
+
+
+
+/*---NOSOTROS---*/
+
+
+.texto-nosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -80px; 
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+
+}
+
+
+
+.texto-nosotros img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover; /* la imagen rellena el espacio del contenedor */
+    object-position: center;
+}
+
+
+.caja-texto-nosotros{
+    padding: 1rem;
+}
+
+.info-nosotros h2 {
+    font-family: var(--tipografia);
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+}
+
+.info-nosotros p {
+    font-family: var(--tipografia);
+    font-weight: 350;
+    font-size: 20px;
+    color: white;
+    margin: 1rem;
+
+    
+    flex-grow: 1; /*llenara el espacio disponible*/
+}
+
+.info-nosotros article{
+    background-color: var(--color-secundario);
+}
+
+.tres-iconos{
+    font-family: var(--tipografia);
+    font-weight: 350;
+    font-size: 20px;
+    color: black;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* espaciado entre las tarjetas */
+    
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.tres-iconos img{
+    width: 40%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+
+.tres-iconos p{
+    font-size: 18px; 
+   
+}
+
+
+.tres-iconos article {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  
+    text-align: center;
+}
+
+
+/*NOSOTROS RESPONSIVE*/
+
+@media (max-width: 768px){
+    .texto-nosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .texto-nosotros img {
+        max-width: 100%;  /* ancho maximo */
+        height: auto;    
+        display: block;   /* sin espacios en la imagen */
+        margin: 0 auto;   
+    }
+
+
+}
+
+@media (max-width: 425px){
+    .tres-iconos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+}
+
+@media (max-width:320px){
+    
+}
+
+
+
+
+
+/*---CONTACTO---*/
+
+.contacto h2{
+    font-family: var(--tipografia);
+    font-weight: 700;
+    font-size: 45px;
+    color: white;
+}
+
+.info-contacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -80px; 
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    margin-bottom:10rem;
+}
+
+.contenido-contacto{
+    background-color: var(--color-secundario);
+    padding: 2rem;
+}
+
+.caja-formulario{
+    background-color: white;
+}
+
+.info-contacto h3{
+    font-family: var(--tipografia);
+    font-weight: 500;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.info-contacto p {
+    font-family: var(--tipografia);
+    font-weight: 350;
+    font-size: 20px;
+    color: white;
+}
+
+.info-detallada{
+    padding: 0;
+}
+
+
+.info-detallada li{
+    display: flex;
+    list-style: none;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.info-detallada img{
+    width: 50px;
+    height: auto;
+    margin-right: 1rem;
+    
+  
+}
+
+
+.mensaje-contacto{
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+.formulario{
+    padding: 1.5rem;
+}
+
+.formulario p{
+    font-family: var(--tipografia);
+    font-weight: 350;
+    font-size: 20px;
+    color: black;
+}
+
+.formulario label{
+    font-family: var(--tipografia);
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+
+    display: block;
+    margin-top: 1rem;
+}
+
+
+
+.formulario input, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 4px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;   /*para que no redimencione la caja de texto*/
+}
+
+.formulario input:focus,
+textarea:focus{
+    border-color: var(--color-primario);
+}
+
+
+.boton-enviar{
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100%;
+
+    margin-top: 1rem;
+    
+
+}
+
+
+/*CONTACTO RESPONSIVE*/
+
+@media (max-width: 768px){
+    .info-contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+@media (max-width: 425px){
+    .info-contacto{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .info-contacto h3{
+        text-align: center;
+    }
+    .info-contacto p{
+        font-size: 18px;
+    }
+    .info-detallada img{
+        width: 40px;
+    }
+
+}
+
+@media (max-width:320px){
+    .info-contacto{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .info-contacto h3{
+        text-align: center;
+        font-size: 25px;
+    }
+    .info-contacto p{
+        font-size: 15px;
+    }
+
+    
+}
+
+
+
+
+
+/*---FOOTER---*/
+
+.caja-footer{
+    /*LO NUEVO*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 3rem;
+}
+
+
+
+
+.footer-seccion{
+    font-family: var(--tipografia);
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+
+}
+
+
+.footer-seccion h2{
+    margin-bottom: 5rem;
+}
+
+
+
+
+.footer-seccion p{
+    font-family: var(--tipografia);
+    font-weight: 350;
+    font-size: 15px;
+    color: white;
+
+    margin-top: auto;
+
+    
+}
+
+
+.contactanos{
+    border-left: 1px solid white;
+}
+
+.horario{
+    border-left: 1px solid white;
+}
+
+.siguenos{
+    border-left: 1px solid white;
+}
+
+
+.siguenos img{
+    width: 15%;
+    height: auto;
+}
+
+
+.ultimo-footer{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid white;
+   
+}
+
+
+.derechos-autor {
+    font-family: var(--tipografia);
+    font-weight: 350;
+    font-size: 20px;
+    color: white;
+}
+
+
+/*FOOTER RESPONSIVE*/
+
+
+@media (max-width: 768px){
+    .caja-footer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+    }
+    .footer-seccion{
+        text-align: center;
+    }
+    .footer-seccion h2{
+        margin-bottom: 3rem;
+        font-size: 25px;
+    }
+    .siguenos, 
+    .horario, 
+    .contactanos {
+        border-left: none;
+    }
+    .direccion h2{
+        margin-bottom: 0;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid white;
+    }
+    .direccion p{
+        padding-top: 2rem;
+    }
+    .contactanos h2{
+        border-top: 1px solid white;
+        padding-top: 3rem;
+    }
+    .horario h2{
+        border-top: 1px solid white;
+        padding-top: 3rem;
+    }
+    .siguenos h2{
+        border-top: 1px solid white;
+        padding-top: 3rem;
+    }
+
+
+}
+
+@media (max-width: 425px){
+    .caja-footer{
+        padding: 2rem;
+    }
+    .direccion p{
+        padding-top: 1rem;
+    }
+    .contactanos h2{
+        padding-top: 1rem;
+    }
+    .horario h2{
+        padding-top: 1rem;
+    }
+    .siguenos h2{
+        padding-top: 1rem;
+    }
+
+    
+}
+
+@media (max-width:320px){
+    .footer-seccion h2{
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+    .direccion p{
+        padding-top: .5rem;
+    }
+    .contactanos h2{
+        padding-top: .5rem;
+    }
+    .horario h2{
+        padding-top: .5rem;
+    }
+    .siguenos h2{
+        padding-top: .5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

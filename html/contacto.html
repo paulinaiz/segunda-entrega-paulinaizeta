@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veterinaria</title>
+    <link href="../css/diseño.css" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <header>  <!--BOOTSTRAP-->
+
+        <nav class="navbar navbar-expand-md">
+
+            <div class="container-fluid">
+
+                <!--TITULO DE LA PAGINA-->
+                <h1 class="navbar-brand" href="../index.html">Veterinaria</h1>
+
+                <!--Boton navbar (pantallas pequeñas)-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/html/tienda.html">Tienda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/html/servicio.html">Servicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/html/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/html/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="contacto">
+
+            <div class="fondo">
+                <h2>Contacto</h2>
+            </div>
+
+        </section>
+
+        <section class="info-contacto ">
+            <article class="contenido-contacto">
+                
+                <h3>Informacion de contacto</h3>
+                
+
+
+                <ul class="info-detallada">
+                    <li>
+                        <img src="../imagenes/direccion.png" alt="Ubicación">
+                        <p>Región Metropolitana, Chile</p>
+                    </li>
+                    <li>
+                        <img src="../imagenes/llamada-emergencia.png" alt="Número de emergencia">
+                        <div>
+                            <p>Número emergencia</p>
+                            <p>+56 9 3333 3333</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../imagenes/whatsapp.png" alt="WhatsApp">
+                        <div>
+                            <p>Numero WhatsApp</p>
+                            <p>+56 9 5555 5555</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../imagenes/horario.png" alt="Horario">
+                        <div>
+                            <p>Horario de lunes a viernes: </br>9:00 AM a 8:00 PM</p>    
+                            <p>Horario sábado: </br> 10:00 AM a 3:00 PM</p>
+                            <p>Domingo y festivos: Cerrado</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../imagenes/sobre-correo.png" alt="Correo">
+                        <p>Veterinaria@ggggg.cl</p>
+                    </li>
+                </ul>
+
+
+
+                <p class="mensaje-contacto">Estamos aquí para ti y tu mascota. ¡No dudes en escribirnos o visitarnos!</p>
+
+            </article>
+
+
+
+            <article class="caja-formulario">
+                <form class="formulario">
+                    <p>¡Escribenos un mensaje y te contestaremos a la brevedad!</p>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Escribe tu nombre aqui"/>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" placeholder="Escribe tu apellido aqui"/>
+
+                    <label for="e-mail">E-mail:</label>
+                    <input type="email" id="e-mail"/>
+
+                    <label for="telefono">Telefono:</label>
+                    <input type="text" placeholder="+56 9"/>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje"></textarea>
+
+                    <button type="submit" class="boton-enviar">Enviar</button>
+
+                </form>
+
+            </article>
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+
+    <footer>  <!--footer-->
+
+        <div class="caja-footer">
+            <section class="footer-seccion direccion">
+                <h2>Veterinaria</h2>
+                <p>Región Metropolitana, Chile</p>
+                </br>
+                <p>Porque ellos merecen todo nuestro amor y cuidado. Estamos aquí para brindarles lo mejor, siempre.</p>
+            </section>
+
+            <section class="footer-seccion contactanos">
+                <h2>Contactanos</h2>
+                <p>Numero WhatsApp </br> +56 9 5555 5555</p>
+                <p>Numero Emergencia </br> +56 9 3333 3333</p>
+                <p>Veterinaria@ggggg.cl</p>
+            </section>
+
+            <section class="footer-seccion horario">
+                <h2>Horarios</h2>
+                <p>Horario Lunes a Viernes: </br> 9:00 AM a 8:00 PM</p>
+                <p>Horario Sabado: </br> 10:00 AM a 3:00 PM</p>
+                <p>Domingo y festivos cerrado</p>
+            </section>
+
+            <section class="footer-seccion siguenos">
+                <h2>Siguenos</h2>
+                <a href="#">
+                    <img src="../imagenes/logo-intagram.png" alt="instagram">
+                </a>
+
+                <a href="#">
+                    <img src="../imagenes/logo-facebook.png" alt="facebook">
+                </a>
+            </section>
+        </div>
+
+        <div class="ultimo-footer">
+            <section class="footer-seccion derechos-autor">
+                <p>© 2024 Veterinaria Todos los derechos de autor reservados</p>
+            </section>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
