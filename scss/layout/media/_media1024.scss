@@ -1,0 +1,15 @@
+/*SERVICIO*/
+
+@media (max-width: 1024px) {
+    main .caja-servicios .lista-servicios .servicio img {
+        width: 90%;
+        max-width: 150px;
+    }
+
+    main .caja-servicios .lista-servicios {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+}

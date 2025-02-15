@@ -1,0 +1,72 @@
+.info-nosotros{
+    .fondo h2{
+        @include h2(map-get($grosor-tipografia, muygruesa), map-get($tamanos-fuente, grande), map-get($colores, texto));
+    }
+    article{
+        background-color: map-get($colores, color-secundario );
+    }
+
+    .texto-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -80px; 
+    
+        margin-left: 5rem;
+        margin-right: 5rem;
+    
+        gap: 0;
+
+        p{
+            @include textos(map-get($grosor-tipografia, muydelgada), map-get($tamanos-fuente, pequeño), map-get($colores, texto));
+            margin: 1rem;
+        
+            
+            flex-grow: 1; /*llenara el espacio disponible*/
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        
+            object-fit: cover;  /*la imagen rellena el espacio del contenedor*/
+            object-position: center;
+        }
+        .caja-texto-nosotros{
+            padding: 1rem;
+        }
+    }
+}
+
+.tres-iconos{
+    @include textos(map-get($grosor-tipografia, muydelgada), map-get($tamanos-fuente, pequeño), black);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* espaciado entre las tarjetas */
+    
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    article{
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+      
+        text-align: center;
+        img{
+            width: 40%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 18px;
+        }
+
+    }
+}
+
+
+
+

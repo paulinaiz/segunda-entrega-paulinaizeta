@@ -1,0 +1,13 @@
+/*INICIO*/
+
+/*TIENDA*/
+
+
+@media (max-width: 500px) {
+    body main .tienda .productos-tienda {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+}

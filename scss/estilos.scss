@@ -1,0 +1,26 @@
+@use "./base/variables";
+
+@import "./utilities/mixins";
+@import "./utilities/maps";
+
+@import "./base/tipografia";
+
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/footer";
+@import "./layout/main-fondo";
+@import "./layout/main-tienda";
+@import "./layout/main-servicio";
+@import "./layout/main-nosotros";
+@import "./layout/main-contacto";
+
+@import "./layout/media/media320";
+@import "./layout/media/media375";
+@import "./layout/media/media425";
+@import "./layout/media/media480";
+@import "./layout/media/media500";
+@import "./layout/media/media520";
+@import "./layout/media/media768";
+@import "./layout/media/media1024";
+
+@import "./layout/animaciones/animaciones";

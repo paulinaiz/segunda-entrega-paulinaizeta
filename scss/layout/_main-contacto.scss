@@ -1,0 +1,88 @@
+.contacto{
+    .fondo h2{
+        @include h2(map-get($grosor-tipografia, muygruesa), map-get($tamanos-fuente, grande), map-get($colores, texto));
+    }
+}
+
+.info-contacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -80px; 
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    margin-bottom:10rem;
+    .contenido-contacto{
+        background-color: map-get($colores, color-secundario );
+        padding: 2rem;
+        h3{
+            @include textos (map-get($grosor-tipografia, mediana), map-get($tamanos-fuente, mediano), map-get($colores, texto));
+            margin-bottom: 1.5rem;
+        }
+        .info-detallada{
+            padding: 0;
+            li{
+                display: flex;
+                list-style: none;
+                align-items: flex-start;
+                margin-bottom: 1.5rem;
+                img{
+                    width: 50px;
+                    height: auto;
+                    margin-right: 1rem;
+                }
+                p{
+                    @include textos(map-get($grosor-tipografia, muydelgada), map-get($tamanos-fuente, pequeño), map-get($colores, texto));
+                }
+            }
+
+        }
+        .mensaje-contacto{
+            @include textos(map-get($grosor-tipografia, muydelgada), map-get($tamanos-fuente, muypequeño), map-get($colores, texto));
+            text-align: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    .caja-formulario{
+        background-color: white;
+        .formulario{
+            padding: 1.5rem;
+            p{
+                @include textos(map-get($grosor-tipografia, muydelgada), map-get($tamanos-fuente, pequeño), black);
+
+            }
+            label{
+                @include textos(map-get($grosor-tipografia, delgada), map-get($tamanos-fuente, pequeño), black);
+                display: block;
+                margin-top: 1rem;
+            }
+            input, textarea{
+                width: 100%;
+                padding: 0.5rem;
+                margin-top: 0.5rem;
+                border: 1px solid rgb(167, 167, 167);
+                border-radius: 4px;
+                &:focus {
+                    border-color: map-get($colores, color-primario);
+                }
+            }
+            textarea {
+                width: 100%;
+                height: 200px;
+                resize: none;   /*para que no redimencione la caja de texto*/
+            }
+            .boton-enviar{
+                @include boton-base(map-get($grosor-tipografia, gruesa), map-get($tamanos-fuente, pequeño), map-get($colores, texto));
+                border-radius: 10px;
+                width: 100%;
+            
+                margin-top: 1rem;
+                
+            
+            }
+        }
+    }
+}

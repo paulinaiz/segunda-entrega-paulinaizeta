@@ -1,1118 +1,878 @@
-:root{
-    --tipografia: "Radio Canada", serif;
-    --color-primario: #22485B;
-    --color-secundario: #809D4D;
+@charset "UTF-8";
+header {
+  background-color: #22485B;
 }
 
+.navbar .container-fluid .navbar-brand {
+  color: white;
+  font-size: 30px;
+}
+.navbar .container-fluid .navbar-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: "Radio Canada", serif;
+  font-weight: 500;
+  text-align: left;
+  padding: 0.9rem;
+  font-size: 18px;
+}
+.navbar .container-fluid .navbar-nav .nav-link:hover {
+  transform: scale(1.04);
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.navbar .navbar-toggler {
+  border: 2px solid white; /* Color del borde del botón navbar */
+}
+.navbar .navbar-toggler:focus, .navbar .navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /*tres lineas blancas*/
+}
 
-body{
+main .inicio {
+  width: 100%;
+  height: 40rem;
+  text-align: center;
+  background-image: url(../imagenes/animales-fondo-bajaopacidad.png); /*un fondo con la imagen principal*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%; /*enfoca a la imagen mas en el centro*/
+  background-color: #22485B;
+}
+main .inicio .texto-inicio {
+  margin: 0 auto;
+  max-width: 700px; /* el máximo del ancho de texto-inicial*/
+  text-align: center; /* un texto centrado*/
+  padding: 2rem;
+  padding-top: 20rem;
+}
+main .inicio .texto-inicio h2 {
+  font-family: "Radio Canada", serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: white;
+}
+main .inicio .texto-inicio p {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 3rem;
+}
+main .inicio .texto-inicio a {
+  font-family: "Radio Canada", serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0.8rem;
+  background-color: #809D4D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1rem 5rem 1rem 5rem;
+}
+main .inicio .texto-inicio a:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #22485B;
+  margin: 0;
+}
+footer .caja-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 3rem;
+}
+footer .caja-footer .footer-seccion {
+  font-family: "Radio Canada", serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+footer .caja-footer .footer-seccion h2 {
+  margin-bottom: 5rem;
+}
+footer .caja-footer .footer-seccion p {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 15px;
+  color: white;
+  margin-top: auto;
+}
+footer .caja-footer .contactanos, footer .caja-footer .siguenos, footer .caja-footer .horario {
+  border-left: 1px solid white;
+}
+footer .caja-footer .siguenos img {
+  width: 15%;
+  height: auto;
+}
+footer .ultimo-footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid white;
+}
+footer .ultimo-footer .derechos-autor {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 15px;
+  color: white;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.fondo {
+  background-image: url(../imagenes/animales-fondo-bajaopacidad.png);
+  background-color: #22485B;
+  background-size: cover;
+  background-position: center; /* Centra la imagen */
+  padding: 20px;
+  color: white;
+}
+.fondo h2 {
+  text-align: center; /*texto centrado*/
+  margin-top: 100px; /*margin arriba y abajo*/
+  margin-bottom: 200px;
+}
+
+.tienda {
+  margin-bottom: 10rem;
+}
+.tienda .fondo h2 {
+  font-family: "Radio Canada", serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: white;
+}
+.tienda .productos-tienda {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 3rem;
+  margin-top: -80px;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+.tienda .productos-tienda .producto {
+  padding: 20px;
+  position: relative;
+  background-color: white;
+  border: 5px solid #809D4D;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tienda .productos-tienda .producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.tienda .productos-tienda .producto .producto p {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 20px;
+  color: black;
+}
+.tienda .productos-tienda .producto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.tienda .productos-tienda .producto button {
+  font-family: "Radio Canada", serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0.8rem;
+  background-color: #809D4D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.tienda .productos-tienda .producto button:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.caja-servicios {
+  margin-bottom: 10rem;
+}
+.caja-servicios .fondo h2 {
+  font-family: "Radio Canada", serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: white;
+}
+.caja-servicios .lista-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 3rem;
+  margin-top: -80px;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+.caja-servicios .lista-servicios .servicio {
+  padding: 20px;
+  position: relative;
+  background-color: white;
+  border: 5px solid #809D4D;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+  min-height: 100px;
+}
+.caja-servicios .lista-servicios .servicio:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.caja-servicios .lista-servicios .servicio img {
+  width: 100%;
+  max-width: 200px; /*maximo de ancho*/
+  height: auto;
+  object-fit: cover;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.caja-servicios .lista-servicios .servicio .servicio h3 {
+  font-family: "Radio Canada", serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: black;
+}
+.caja-servicios .lista-servicios .servicio button {
+  font-family: "Radio Canada", serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0.8rem;
+  background-color: #809D4D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.caja-servicios .lista-servicios .servicio button:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-nosotros .fondo h2 {
+  font-family: "Radio Canada", serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: white;
+}
+.info-nosotros article {
+  background-color: #809D4D;
+}
+.info-nosotros .texto-nosotros {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: -80px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  gap: 0;
+}
+.info-nosotros .texto-nosotros p {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 20px;
+  color: white;
+  margin: 1rem;
+  flex-grow: 1; /*llenara el espacio disponible*/
+}
+.info-nosotros .texto-nosotros img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*la imagen rellena el espacio del contenedor*/
+  object-position: center;
+}
+.info-nosotros .texto-nosotros .caja-texto-nosotros {
+  padding: 1rem;
+}
+
+.tres-iconos {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 20px;
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* espaciado entre las tarjetas */
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.tres-iconos article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tres-iconos article img {
+  width: 40%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.tres-iconos article p {
+  font-size: 18px;
+}
+
+.contacto .fondo h2 {
+  font-family: "Radio Canada", serif;
+  font-weight: 700;
+  font-size: 45px;
+  color: white;
+}
+
+.info-contacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: -80px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 10rem;
+}
+.info-contacto .contenido-contacto {
+  background-color: #809D4D;
+  padding: 2rem;
+}
+.info-contacto .contenido-contacto h3 {
+  font-family: "Radio Canada", serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.info-contacto .contenido-contacto .info-detallada {
+  padding: 0;
+}
+.info-contacto .contenido-contacto .info-detallada li {
+  display: flex;
+  list-style: none;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.info-contacto .contenido-contacto .info-detallada li img {
+  width: 50px;
+  height: auto;
+  margin-right: 1rem;
+}
+.info-contacto .contenido-contacto .info-detallada li p {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 20px;
+  color: white;
+}
+.info-contacto .contenido-contacto .mensaje-contacto {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.info-contacto .caja-formulario {
+  background-color: white;
+}
+.info-contacto .caja-formulario .formulario {
+  padding: 1.5rem;
+}
+.info-contacto .caja-formulario .formulario p {
+  font-family: "Radio Canada", serif;
+  font-weight: 350;
+  font-size: 20px;
+  color: black;
+}
+.info-contacto .caja-formulario .formulario label {
+  font-family: "Radio Canada", serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  display: block;
+  margin-top: 1rem;
+}
+.info-contacto .caja-formulario .formulario input, .info-contacto .caja-formulario .formulario textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 4px;
+}
+.info-contacto .caja-formulario .formulario input:focus, .info-contacto .caja-formulario .formulario textarea:focus {
+  border-color: #22485B;
+}
+.info-contacto .caja-formulario .formulario textarea {
+  width: 100%;
+  height: 200px;
+  resize: none; /*para que no redimencione la caja de texto*/
+}
+.info-contacto .caja-formulario .formulario .boton-enviar {
+  font-family: "Radio Canada", serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0.8rem;
+  background-color: #809D4D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 1rem;
+}
+.info-contacto .caja-formulario .formulario .boton-enviar:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*INICIO*/
+@media (max-width: 320px) {
+  body main .inicio .texto-inicio h2 {
+    font-size: 30px;
+  }
+  body main .inicio .texto-inicio p {
+    font-size: 14px;
+  }
+  body main .inicio .texto-inicio a {
+    font-size: 18px;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+}
+/*TIENDA*/
+@media (max-width: 320px) {
+  body main .tienda .productos-tienda {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+/*NOSOTROS*/
+@media (max-width: 320px) {
+  main .info-nosotros .texto-nosotros {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  main .info-nosotros .texto-nosotros .caja-texto-nosotros p {
     margin: 0;
-    padding: 0;
+  }
 }
-
-
-a {
-    text-decoration: none;
+/*CONTACTO*/
+@media (max-width: 320px) {
+  body main .info-contacto .contenido-contacto {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  main .info-contacto .contenido-contacto h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+  main .info-contacto .contenido-contacto .info-detallada li p {
+    font-size: 15px;
+  }
 }
-
-h1 {
-    font-family: var(--tipografia);   /*tipografia*/
-    font-weight: 700;                     /*grosor de la letra*/
-    font-size: 40px;
+/*FOOTER*/
+@media (max-width: 320px) {
+  body footer .caja-footer .footer-seccion h2 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+  }
+  body footer .caja-footer .direccion p {
+    padding-top: 0.5rem;
+  }
+  body footer .caja-footer .contactanos h2, body footer .caja-footer .horario h2, body footer .caja-footer .siguenos h2 {
+    padding-top: 0.5rem;
+  }
+  body footer .caja-footer .horario h2 {
+    padding-top: 0.5rem;
+  }
+  body footer .caja-footer .siguenos h2 {
+    padding-top: 0.5rem;
+  }
 }
-
-
-main {
-    width: 100%;
+/*INICIO*/
+@media (min-width: 321px) and (max-width: 375px) {
+  main .inicio .texto-inicio a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/*INICIO*/
+@media (max-width: 425px) {
+  body main .inicio .texto-inicio {
+    padding-top: 10rem;
+  }
+  main .inicio .texto-inicio h2 {
+    font-size: 30px;
+  }
+  main .inicio .texto-inicio p {
+    font-size: 18px;
+  }
+}
+/*TIENDA*/
+@media (max-width: 425px) {
+  main .tienda .productos-tienda {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  main .tienda .producto p {
+    font-size: 15px;
+  }
+}
+/*SERVICIO*/
+@media (max-width: 425px) {
+  body main .caja-servicios .lista-servicios {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  main .caja-servicios .lista-servicios .servicio button {
+    padding: 8px;
+  }
+}
+/*NOSOTROS*/
+@media (max-width: 425px) {
+  main .tres-iconos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  main .info-nosotros .texto-nosotros .caja-texto-nosotros p {
+    font-size: 12px;
+  }
+}
+/*CONTACTO*/
+@media (max-width: 425px) {
+  main .info-contacto {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  main .info-contacto .contenido-contacto h3 {
+    text-align: center;
+  }
+  main .info-contacto .contenido-contacto .info-detallada li p {
+    font-size: 18px;
+  }
+  main .info-detallada .contenido-contacto .info-detallada li img {
+    width: 40px;
+  }
+}
+/*FOOTER*/
+@media (min-width: 321px) and (max-width: 425px) {
+  footer .caja-footer {
+    padding: 2rem;
+  }
+  footer .caja-footer .direccion p {
+    padding-top: 1rem;
+  }
+  footer .caja-footer .contactanos h2, footer .caja-footer .horario h2, footer .caja-footer .siguenos h2 {
+    padding-top: 1rem;
+  }
+  footer .caja-footer .horario h2 {
+    padding-top: 1rem;
+  }
+  footer .caja-footer .siguenos h2 {
+    padding-top: 1rem;
+  }
+}
+/*INICIO*/
+@media (max-width: 480px) {
+  body main .inicio .texto-inicio {
+    padding-top: 12rem;
+  }
+}
+/**/
+/*INICIO*/
+/*TIENDA*/
+@media (max-width: 500px) {
+  body main .tienda .productos-tienda {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+}
+/*INICIO*/
+/*NOSOTROS*/
+@media (max-width: 520px) {
+  main .info-nosotros .texto-nosotros .caja-texto-nosotros p {
+    font-size: 15px;
+  }
+}
+/*INICIO*/
+@media (max-width: 768px) {
+  body main .inicio .texto-inicio {
+    padding-top: 10rem;
+  }
+}
+/*TIENDA*/
+@media (max-width: 768px) {
+  main .tienda .productos-tienda {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  main .tienda .productos-tienda .producto {
+    padding: 10px;
+  }
+  main .tienda .productos-tienda .producto button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+/*SERVICIO*/
+@media (max-width: 768px) {
+  main .caja-servicios .lista-servicios .servicio {
+    min-width: 100px;
+    min-height: 50px;
+    padding: 10px;
+  }
+  main .caja-servicios .lista-servicios .servicio img {
+    max-width: 100px;
+  }
+  main .caja-servicios .lista-servicios h3 {
+    font-size: 20px;
+  }
+  main .caja-servicios .lista-servicios .servicio button {
+    font-size: 15px;
+  }
+}
+/*NOSOTROS*/
+@media (max-width: 768px) {
+  main .info-nosotros .texto-nosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0;
+  }
+  main .info-nosotros .texto-nosotros img {
+    max-width: 100%; /* ancho maximo */
     height: auto;
+    display: block; /* sin espacios en la imagen */
+    margin: 0 auto;
+  }
 }
-
-footer{
-    margin: 0;
-    background-color: var(--color-primario);
+/*CONTACTO*/
+@media (max-width: 768px) {
+  main .info-contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 }
-
-button, .boton {
-    font-family: var(--tipografia);    /*tipografia*/
-    font-weight: 600;                 /*grosor de la tipografia*/
-    font-size: 20px;             /*tamaño de la tipografia*/
-
-    padding: 0.8rem;                           /*espacio dentro del boton*/
-    background-color: var(--color-secundario);              /*fondo*/
-    color: white;                                /*color del texto*/
-    border: none;                           /*sin borde*/
-    border-radius: 10px;                  /*esquinas redondeadas*/
-    text-decoration: none;           /*sin decoracion*/
-    cursor: pointer;
-    
+/*FOOTER*/
+@media (max-width: 768px) {
+  footer .caja-footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
+  }
+  footer .caja-footer .footer-seccion {
+    text-align: center;
+  }
+  footer .caja-footer .footer-seccion h2 {
+    margin-bottom: 3rem;
+    font-size: 25px;
+  }
+  footer .caja-footer .siguenos,
+  footer .caja-footer .horario,
+  footer .caja-footer .contactanos {
+    border-left: none;
+  }
+  footer .caja-footer .direccion h2 {
+    margin-bottom: 0;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid white;
+  }
+  footer .caja-footer .direccion p {
+    padding-top: 2rem;
+  }
+  footer .caja-footer .contactanos h2, footer .caja-footer .horario h2, footer .caja-footer .siguenos h2 {
+    border-top: 1px solid white;
+    padding-top: 3rem;
+  }
+  footer .caja-footer .horario h2 {
+    border-top: 1px solid white;
+    padding-top: 3rem;
+  }
+  footer .caja-footer .siguenos h2 {
+    border-top: 1px solid white;
+    padding-top: 3rem;
+  }
 }
-
-button:hover,
-.boton:hover{
-    transform: scale(1.04);                          /*el boton se escala mas grande o se agranda cuando el puntero este sobre el*/
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);    /*sombra*/
+/*SERVICIO*/
+@media (max-width: 1024px) {
+  main .caja-servicios .lista-servicios .servicio img {
+    width: 90%;
+    max-width: 150px;
+  }
+  main .caja-servicios .lista-servicios {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
 }
-
-
-
-
-
-main section h2 {
-    margin: 0;
-}
-
-
-
-.fondo{          /*se repite en todas las secciones*/
-    background-image: url(../imagenes/animales-fondo-bajaopacidad.png);
-    background-color: var(--color-primario);
-    background-size: cover; 
-    background-position: center; /* Centra la imagen */
-    padding: 20px;
-    color: white;
-}
-
-.fondo h2{
-    text-align: center;    /*texto centrado*/
-    margin-top: 100px;      /*margin arriba y abajo*/
-    margin-bottom: 200px;
-
-}
-
-
 /*animaciones en general*/
 .tracking-in-expand {
-	animation: tracking-in-expand 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: tracking-in-expand 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+
 @keyframes tracking-in-expand {
-    0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
-
-
-
-
-
-
-
-/*---MENU---*/
-
-header{
-    background-color: var(--color-primario);    /*fondo*/
-}
-
-/*con mas especificidad las clases de bootstrap*/
-
-header .navbar .navbar-brand {
-    color: white; 
-    font-size: 35px;
-}
-
-
-header .navbar .navbar-nav .nav-link {
-    color: white; 
-    text-decoration: none; 
-    font-family: var(--tipografia); /* tipografía*/
-    font-weight: 500; /* grosor*/
-    text-align: left; /* alineación del texto a la izquierda*/
-    padding: 0.9rem; 
-    font-size: 18px; /*tamaño de la letra*/
-}
-
-header .navbar .navbar-nav .nav-link:hover {
-    transform: scale(1.04);
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-}
-
-header .navbar .navbar-toggler {
-    border: 2px solid white; /* Color del borde del botón navbar */
-}
-
-
-
-header .navbar .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /*tres lineas blancas*/
-}
-
-header .navbar .navbar-toggler:focus,
-header .navbar .navbar-toggler:active{
-    outline: none;                       /*elimina el contorno*/
-    box-shadow: none;                  /*elimina la sombra que viene de bootstrap*/
-}
-
-
-
 /*animacion MENU*/
 .rotate-hor-center {
-	animation: rotate-hor-center 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: rotate-hor-center 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 @keyframes rotate-hor-center {
-    0% {
-      transform: rotateX(0);
-    }
-    100% {
-      transform: rotateX(-360deg);
-    }
+  0% {
+    transform: rotateX(0);
   }
-
-
-
-
-
-
-/*---INICIO---*/
-
-.inicio {
-    width: 100%;
-    height: 40rem;
-
-    text-align: center;
-    background-image: url(../imagenes/animales-fondo-bajaopacidad.png);   /*un fondo con la imagen principal*/
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: 50%;   /*enfoca a la imagen mas en el centro*/
-    background-color: var(--color-primario);
+  100% {
+    transform: rotateX(-360deg);
+  }
 }
-
-.texto-inicio{
-    margin: 0 auto;
-    max-width: 700px;       /* el máximo del ancho de texto-inicial*/
-    text-align: center;        /* un texto centrado*/
-    padding: 2rem;
-    padding-top: 20rem;
-    
-}
-
-.texto-inicio h2{
-    font-family: var(--tipografia);
-    font-weight: 700;
-    font-size: 45px;
-    color: white;
-}
-
-.texto-inicio p{
-    font-family: var(--tipografia);
-    font-weight: 350;
-    font-size: 20px;
-    color: white;
-    margin-bottom: 3rem;
-}
-
-.texto-inicio a{
-    padding: 1rem 5rem 1rem 5rem
-}
-
-
 /*animacion INICIO*/
 .scale-up-hor-center {
-	animation: scale-up-hor-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-up-hor-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-  
+
 @keyframes scale-up-hor-center {
-    0% {
-      transform: scaleX(0.4);
-    }
-    100% {
-      transform: scaleX(1);
-    }
+  0% {
+    transform: scaleX(0.4);
   }
-
-
-
-
-
-
-
-/*INICIO RESPONSIVE*/
-
-
-@media (max-width: 768px){
-
+  100% {
+    transform: scaleX(1);
+  }
 }
-
-@media (max-width: 425px){
-    .texto-inicio{
-        padding-top: 10rem;
-    }
-    .texto-inicio h2{
-        font-size: 40px; 
-    }
-    .texto-inicio p{
-        font-size: 18px;
-    }
-}
-
-@media (max-width:320px){
-    .texto-inicio h2{
-        font-size: 30px; 
-    }
-    .texto-inicio p{
-        font-size: 14px;
-    }
-    .texto-inicio a{
-        font-size: 18px;
-        padding: 1rem 2rem 1rem 2rem;
-    }
-}
-
-
-
-/*---TIENDA---*/
-
-
-.tienda{
-    margin-bottom: 10rem ;
-}
-
-.tienda h2{
-    font-family: var(--tipografia);
-    font-weight: 700;
-    font-size: 45px;
-    color: white;
-}
-
-.producto p{
-    font-family: var(--tipografia);
-    font-weight: 350;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-}
-
-
-
-
-
-
-.productos-tienda{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
-    row-gap: 3rem;
-
-    margin-top: -80px; /* para que se coloque por encima de la imagen del fondo */
-
-    margin-left: 10rem;            
-    margin-right: 10rem;
-
-}
-
-
-
-.producto {
-   
-    padding: 20px;
-    position: relative;
-    background-color: white;
-    border: 5px solid var(--color-secundario);
-    border-radius: 15px;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-}
-
-.producto:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-
-.producto img{
-    width: 100%;
-    height: auto;
-    object-fit: cover; /*la imagen no se distorsione al ajustarse */
-}
-
-
-.producto button{
-    font-size: 20px;
-    border-radius: 10px;
-
-}
-
-
-/*animacion TIENDA*/
+/*animacion TIENDA Y SERVICIO*/
 .flip-in-ver-right {
-	animation: flip-in-ver-right 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: flip-in-ver-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes flip-in-ver-right {
-    0% {
-      transform: rotateY(-80deg);
-      opacity: 0;
-    }
-    100% {
-      transform: rotateY(0);
-      opacity: 1;
-    }
+  0% {
+    transform: rotateY(-80deg);
+    opacity: 0;
   }
-
-
-
-
-
-/*TIENDA RESPONSIVE*/
-
-@media (max-width: 768px){
-    .productos-tienda{
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
-
-    .producto{
-        padding: 10px;
-    }
-
-    .producto button{
-        font-size: 15px;
-        padding: 10px;
-    }
-
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
 }
-
-@media (max-width: 425px){
-    .productos-tienda{
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 1rem;
-        column-gap: 1rem;
-
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
-    .producto p{
-        font-size: 15px;
-    }
-}
-
-@media (max-width:320px){
-    
-}
-
-
-
-
-
-
-/*---SERVICIOS---*/
-
-.caja-servicios{
-    margin-bottom: 10rem;
-}
-
-
-.caja-servicios h2{
-    font-family: var(--tipografia);
-    font-weight: 700;
-    font-size: 45px;
-    color: white;
-}
-
-
-.lista-servicios{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
-    row-gap: 3rem;
-
-    margin-top: -80px; 
-
-    margin-left: 10rem;
-    margin-right: 10rem;
-}
-
-
-.lista-servicios h3 {
-    font-family: var(--tipografia);
-    font-weight: 500;
-    font-size: 30px;
-    color: black;
-
-}
-
-
-
-.servicio{
-    padding: 20px;
-    position: relative;
-    background-color: white;
-    border: 5px solid var(--color-secundario);
-    border-radius: 15px;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-
-
-    min-width: 200px;
-    min-height: 100px;
-
-
-}
-
-.servicio:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 10px 20px black;
-}
-
-
-.servicio img{
-    width: 100%;
-    max-width: 200px;    /*maximo de ancho*/
-    height: auto;
-    object-fit: cover; 
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    
-}
-
-.servicio button{
-    width: 100%;
-    height: auto;
-    font-size: 20px;
-    border-radius: 10px;
-}
-
-
-
-/*SERVICIO RESPONSIVE*/
-
-@media (max-width: 1024px){
-    .servicio img{
-        width: 90%;
-        max-width: 150px;
-    }
-    .lista-servicios{
-        margin-left: 5rem;
-        margin-right: 5rem;
-
-        column-gap: 2rem;
-        row-gap: 2rem;
-    }
-}
-
-
-
-@media (max-width: 768px){
-    .servicio{
-        min-width: 100px;
-        min-height: 50px;
-
-        padding: 10px;
-    }
-    .servicio img{
-        max-width: 100px;
-    }
-
-    .lista-servicios h3{
-        font-size: 20px;
-    }
-    .servicio button{
-        font-size: 15px;
-        
-    }
-
-}
-
-@media (max-width: 425px){
-    .lista-servicios{
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 1rem;
-        row-gap: 1rem;
-
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
-    .servicio button{
-        padding: 8px;
-    }
-}
-
-@media (max-width:320px){
-    
-}
-
-
-
-
-/*---NOSOTROS---*/
-
-
-.texto-nosotros{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: -80px; 
-
-    margin-left: 5rem;
-    margin-right: 5rem;
-
-
-}
-
-
-
-.texto-nosotros img{
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover; /* la imagen rellena el espacio del contenedor */
-    object-position: center;
-}
-
-
-.caja-texto-nosotros{
-    padding: 1rem;
-}
-
-.info-nosotros h2 {
-    font-family: var(--tipografia);
-    font-weight: 700;
-    font-size: 45px;
-    color: white;
-}
-
-.info-nosotros p {
-    font-family: var(--tipografia);
-    font-weight: 350;
-    font-size: 20px;
-    color: white;
-    margin: 1rem;
-
-    
-    flex-grow: 1; /*llenara el espacio disponible*/
-}
-
-.info-nosotros article{
-    background-color: var(--color-secundario);
-}
-
-.tres-iconos{
-    font-family: var(--tipografia);
-    font-weight: 350;
-    font-size: 20px;
-    color: black;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem; /* espaciado entre las tarjetas */
-    
-
-    margin-left: 5rem;
-    margin-right: 5rem;
-
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-}
-
-.tres-iconos img{
-    width: 40%;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
-
-.tres-iconos p{
-    font-size: 18px; 
-   
-}
-
-
-.tres-iconos article {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-  
-    text-align: center;
-}
-
-
 /*animacion NOSOTROS*/
 .slide-in-blurred-left {
-	animation: slide-in-blurred-left 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  animation: slide-in-blurred-left 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 @keyframes slide-in-blurred-left {
-    0% {
-      transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-      transform-origin: 100% 50%;
-      filter: blur(40px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0) scaleY(1) scaleX(1);
-      transform-origin: 50% 50%;
-      filter: blur(0);
-      opacity: 1;
-    }
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0;
   }
-
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 .slide-in-blurred-right {
-    animation: slide-in-blurred-right 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  animation: slide-in-blurred-right 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 @keyframes slide-in-blurred-right {
-    0% {
-      transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
-      transform-origin: 0% 50%;
-      filter: blur(40px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0) scaleY(1) scaleX(1);
-      transform-origin: 50% 50%;
-      filter: blur(0);
-      opacity: 1;
-    }
+  0% {
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 0% 50%;
+    filter: blur(40px);
+    opacity: 0;
   }
-
-
-
-
-/*NOSOTROS RESPONSIVE*/
-
-@media (max-width: 768px){
-    .texto-nosotros{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-    .texto-nosotros img {
-        max-width: 100%;  /* ancho maximo */
-        height: auto;    
-        display: block;   /* sin espacios en la imagen */
-        margin: 0 auto;   
-    }
-
-
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
 }
-
-@media (max-width: 425px){
-    .tres-iconos{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-    
-}
-
-@media (max-width:320px){
-    
-}
-
-
-
-
-
-/*---CONTACTO---*/
-
-.contacto h2{
-    font-family: var(--tipografia);
-    font-weight: 700;
-    font-size: 45px;
-    color: white;
-}
-
-.info-contacto{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: -80px; 
-
-    margin-left: 5rem;
-    margin-right: 5rem;
-
-    margin-bottom:10rem;
-}
-
-.contenido-contacto{
-    background-color: var(--color-secundario);
-    padding: 2rem;
-}
-
-.caja-formulario{
-    background-color: white;
-}
-
-.info-contacto h3{
-    font-family: var(--tipografia);
-    font-weight: 500;
-    font-size: 30px;
-    color: white;
-    margin-bottom: 1.5rem;
-}
-
-.info-contacto p {
-    font-family: var(--tipografia);
-    font-weight: 350;
-    font-size: 20px;
-    color: white;
-}
-
-.info-detallada{
-    padding: 0;
-}
-
-
-.info-detallada li{
-    display: flex;
-    list-style: none;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-}
-
-
-
-.info-detallada img{
-    width: 50px;
-    height: auto;
-    margin-right: 1rem;
-    
-  
-}
-
-
-.mensaje-contacto{
-    text-align: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-
-
-.formulario{
-    padding: 1.5rem;
-}
-
-.formulario p{
-    font-family: var(--tipografia);
-    font-weight: 350;
-    font-size: 20px;
-    color: black;
-}
-
-.formulario label{
-    font-family: var(--tipografia);
-    font-weight: 400;
-    font-size: 20px;
-    color: black;
-
-    display: block;
-    margin-top: 1rem;
-}
-
-
-
-.formulario input, textarea{
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border: 1px solid rgb(167, 167, 167);
-    border-radius: 4px;
-}
-
-textarea {
-    width: 100%;
-    height: 200px;
-    resize: none;   /*para que no redimencione la caja de texto*/
-}
-
-.formulario input:focus,
-textarea:focus{
-    border-color: var(--color-primario);
-}
-
-
-.boton-enviar{
-    font-size: 20px;
-    border-radius: 10px;
-    width: 100%;
-
-    margin-top: 1rem;
-    
-
-}
-
 /*animacion CONTACTO*/
 .bounce-in-top {
-	animation: bounce-in-top 1.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: bounce-in-top 1.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
+
 @keyframes bounce-in-top {
-    0% {
-      transform: translateY(-500px);
-      animation-timing-function: ease-in;
-      opacity: 0;
-    }
-    38% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
-      opacity: 1;
-    }
-    55% {
-      transform: translateY(-65px);
-      animation-timing-function: ease-in;
-    }
-    72% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
-    }
-    81% {
-      transform: translateY(-28px);
-      animation-timing-function: ease-in;
-    }
-    90% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
-    }
-    95% {
-      transform: translateY(-8px);
-      animation-timing-function: ease-in;
-    }
-    100% {
-      transform: translateY(0);
-      animation-timing-function: ease-out;
-    }
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
 }
 
-
-
-
-
-/*CONTACTO RESPONSIVE*/
-
-@media (max-width: 768px){
-    .info-contacto{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-}
-
-@media (max-width: 425px){
-    .info-contacto{
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
-    .info-contacto h3{
-        text-align: center;
-    }
-    .info-contacto p{
-        font-size: 18px;
-    }
-    .info-detallada img{
-        width: 40px;
-    }
-
-}
-
-@media (max-width:320px){
-    .info-contacto{
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .info-contacto h3{
-        text-align: center;
-        font-size: 25px;
-    }
-    .info-contacto p{
-        font-size: 15px;
-    }
-
-    
-}
-
-
-
-
-
-/*---FOOTER---*/
-
-.caja-footer{
-    /*LO NUEVO*/
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-
-    padding: 3rem;
-}
-
-
-
-
-.footer-seccion{
-    font-family: var(--tipografia);
-    font-weight: 600;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    
-
-}
-
-
-.footer-seccion h2{
-    margin-bottom: 5rem;
-}
-
-
-
-
-.footer-seccion p{
-    font-family: var(--tipografia);
-    font-weight: 350;
-    font-size: 15px;
-    color: white;
-
-    margin-top: auto;
-
-    
-}
-
-
-.contactanos{
-    border-left: 1px solid white;
-}
-
-.horario{
-    border-left: 1px solid white;
-}
-
-.siguenos{
-    border-left: 1px solid white;
-}
-
-
-.siguenos img{
-    width: 15%;
-    height: auto;
-}
-
-
-.ultimo-footer{
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid white;
-   
-}
-
-
-.derechos-autor {
-    font-family: var(--tipografia);
-    font-weight: 350;
-    font-size: 20px;
-    color: white;
-}
-
-
-/*FOOTER RESPONSIVE*/
-
-
-@media (max-width: 768px){
-    .caja-footer{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        padding: 2rem;
-    }
-    .footer-seccion{
-        text-align: center;
-    }
-    .footer-seccion h2{
-        margin-bottom: 3rem;
-        font-size: 25px;
-    }
-    .siguenos, 
-    .horario, 
-    .contactanos {
-        border-left: none;
-    }
-    .direccion h2{
-        margin-bottom: 0;
-        padding-bottom: 3rem;
-        border-bottom: 1px solid white;
-    }
-    .direccion p{
-        padding-top: 2rem;
-    }
-    .contactanos h2{
-        border-top: 1px solid white;
-        padding-top: 3rem;
-    }
-    .horario h2{
-        border-top: 1px solid white;
-        padding-top: 3rem;
-    }
-    .siguenos h2{
-        border-top: 1px solid white;
-        padding-top: 3rem;
-    }
-
-
-}
-
-@media (max-width: 425px){
-    .caja-footer{
-        padding: 2rem;
-    }
-    .direccion p{
-        padding-top: 1rem;
-    }
-    .contactanos h2{
-        padding-top: 1rem;
-    }
-    .horario h2{
-        padding-top: 1rem;
-    }
-    .siguenos h2{
-        padding-top: 1rem;
-    }
-
-    
-}
-
-@media (max-width:320px){
-    .footer-seccion h2{
-        margin-bottom: 1rem;
-        font-size: 20px;
-    }
-    .direccion p{
-        padding-top: .5rem;
-    }
-    .contactanos h2{
-        padding-top: .5rem;
-    }
-    .horario h2{
-        padding-top: .5rem;
-    }
-    .siguenos h2{
-        padding-top: .5rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=dise%C3%B1o.css.map */

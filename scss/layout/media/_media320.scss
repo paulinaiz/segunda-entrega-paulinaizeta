@@ -1,0 +1,93 @@
+/*INICIO*/
+
+@media (max-width:320px){
+    body main .inicio .texto-inicio h2 {
+        font-size: 30px;
+    }
+
+    body main .inicio .texto-inicio p {
+        font-size: 14px;
+    }
+
+    body main .inicio .texto-inicio a {
+        font-size: 18px;
+        padding: 1rem 2rem 1rem 2rem;
+    }
+    
+}
+
+
+
+
+
+/*TIENDA*/
+
+@media (max-width: 320px) {
+    body main .tienda .productos-tienda {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+
+
+/*NOSOTROS*/
+@media (max-width: 320px) {
+    main .info-nosotros .texto-nosotros{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    main .info-nosotros .texto-nosotros .caja-texto-nosotros p {
+        margin: 0;
+
+    }
+}
+
+
+
+
+/*CONTACTO*/
+@media (max-width: 320px) {
+    body main .info-contacto .contenido-contacto{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        
+
+    }
+
+    main .info-contacto .contenido-contacto h3 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    main .info-contacto .contenido-contacto .info-detallada li p {
+        font-size: 15px;
+    }
+}
+
+
+
+
+/*FOOTER*/
+@media (max-width: 320px) {
+    body footer .caja-footer .footer-seccion h2 {
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+
+    body footer .caja-footer .direccion p {
+        padding-top: 0.5rem;
+    }
+
+    body footer .caja-footer .contactanos h2 {
+        padding-top: 0.5rem;
+    }
+
+    body footer .caja-footer .horario h2 {
+        padding-top: 0.5rem;
+    }
+
+    body footer .caja-footer .siguenos h2 {
+        padding-top: 0.5rem;
+    }
+}

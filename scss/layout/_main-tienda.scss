@@ -1,0 +1,50 @@
+.tienda {
+    margin-bottom: 10rem;
+
+    .fondo h2 {
+        @include h2(map-get($grosor-tipografia, muygruesa), map-get($tamanos-fuente, grande), map-get($colores, texto));
+    }
+
+    .productos-tienda {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        row-gap: 3rem;
+        margin-top: -80px; // para que se coloque por encima de la imagen del fondo
+        margin-left: 10rem;
+        margin-right: 10rem;
+
+        .producto {
+            padding: 20px;
+            position: relative;
+            background-color: white;
+            border: 5px solid map-get($colores, color-secundario );
+            border-radius: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .producto p {
+                @include textos(map-get($grosor-tipografia, muydelgada), map-get($tamanos-fuente, pequeño), black);
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover; // la imagen no se distorsione al ajustarse
+            }
+
+            button {
+                @include boton-base (map-get($grosor-tipografia, gruesa), map-get($tamanos-fuente, pequeño), map-get($colores, texto));
+                font-size: 20px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

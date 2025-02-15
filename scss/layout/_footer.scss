@@ -1,0 +1,55 @@
+footer{
+    background-color: map-get($colores, color-primario );
+    margin: 0;
+
+    .caja-footer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 20px;
+        padding: 3rem;
+
+        .footer-seccion{
+            @include textos(map-get($grosor-tipografia, gruesa), map-get($tamanos-fuente, pequeño), map-get($colores, texto));
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            h2{
+                margin-bottom: 5rem;
+            }
+            p{
+                @include textos(map-get($grosor-tipografia, muydelgada), 15px, map-get($colores, texto));
+                margin-top: auto;
+            }
+
+        }
+
+        .contactanos{
+            border-left: 1px solid white;
+        }
+        
+        .horario{
+            @extend .contactanos;
+        }
+        
+        .siguenos{
+            @extend .contactanos;
+            img{
+                width: 15%;
+                height: auto;
+            }
+        }
+    }
+    .ultimo-footer{
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid white;
+        .derechos-autor{
+            @include textos(map-get($grosor-tipografia, muydelgada), 15px, map-get($colores, texto));
+            
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+header{
+    background-color: map-get($colores, color-primario );
+
+}
+
+
+.navbar{
+    .container-fluid{
+        .navbar-brand{
+            color: map-get($colores, texto );
+            font-size: map-get($tamanos-fuente, mediano );
+        }
+        .navbar-nav{
+            .nav-link{
+                color: map-get($colores, texto ); 
+                text-decoration: none; 
+                font-family: $tipografia; 
+                font-weight: map-get($grosor-tipografia , mediana ); 
+                text-align: left;
+                padding: 0.9rem; 
+                font-size: map-get($tamanos-fuente, muypequeño );
+
+                &:hover{
+                    transform: scale(1.04);
+                    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+
+    .navbar-toggler{
+        border: 2px solid white; /* Color del borde del botón navbar */
+        &:focus,
+        &:active {
+            outline: none; 
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon{
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /*tres lineas blancas*/
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.fondo{
+    background-image: url(../imagenes/animales-fondo-bajaopacidad.png);
+    background-color: map-get($colores, color-primario );
+    background-size: cover; 
+    background-position: center; /* Centra la imagen */
+    padding: 20px;
+    color: white;
+    h2{
+        text-align: center;    /*texto centrado*/
+        margin-top: 100px;      /*margin arriba y abajo*/
+        margin-bottom: 200px;
+    }
+}

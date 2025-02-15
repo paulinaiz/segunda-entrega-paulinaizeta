@@ -1,0 +1,36 @@
+main{
+    .inicio{
+        width: 100%;
+        height: 40rem;
+    
+        text-align: center;
+        background-image: url(../imagenes/animales-fondo-bajaopacidad.png);   /*un fondo con la imagen principal*/
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: 50%;   /*enfoca a la imagen mas en el centro*/
+        background-color: map-get($colores, color-primario );
+        .texto-inicio{
+            margin: 0 auto;
+            max-width: 700px;       /* el máximo del ancho de texto-inicial*/
+            text-align: center;        /* un texto centrado*/
+            padding: 2rem;
+            padding-top: 20rem;
+            h2{
+                @include h2(map-get($grosor-tipografia, muygruesa), map-get($tamanos-fuente, grande), map-get($colores, texto));
+            }
+            p{
+                font-family: $tipografia;
+                font-weight: map-get($grosor-tipografia, muydelgada );
+                font-size: map-get($tamanos-fuente, pequeño );
+                color: map-get($colores, texto );
+                margin-bottom: 3rem;
+
+            }
+            a{
+                @include boton-base (map-get($grosor-tipografia, gruesa), map-get($tamanos-fuente, pequeño), map-get($colores, texto));
+                padding: 1rem 5rem 1rem 5rem
+
+            }
+        }
+    }
+}

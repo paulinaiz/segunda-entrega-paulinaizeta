@@ -1,0 +1,135 @@
+/*INICIO*/
+
+@media (max-width: 768px) {
+    body main .inicio .texto-inicio {
+        padding-top: 10rem;
+    }
+}
+
+/*TIENDA*/
+
+
+@media (max-width: 768px) {
+    main .tienda .productos-tienda {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    main .tienda .productos-tienda .producto {
+        padding: 10px;
+    }
+
+    main .tienda .productos-tienda .producto button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+
+
+
+/*SERVICIO*/
+@media (max-width: 768px) {
+    main .caja-servicios .lista-servicios .servicio {
+        min-width: 100px;
+        min-height: 50px;
+        padding: 10px;
+    }
+
+    main .caja-servicios .lista-servicios .servicio img {
+        max-width: 100px;
+    }
+
+    main .caja-servicios .lista-servicios h3 {
+        font-size: 20px;
+    }
+
+    main .caja-servicios .lista-servicios .servicio button {
+        font-size: 15px;
+    }
+}
+
+
+
+
+/*NOSOTROS*/
+
+@media (max-width: 768px) {
+    main .info-nosotros .texto-nosotros {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0;
+    }
+
+    main .info-nosotros .texto-nosotros img {
+        max-width: 100%;  /* ancho maximo */
+        height: auto;    
+        display: block;   /* sin espacios en la imagen */
+        margin: 0 auto;   
+    }
+}
+
+
+
+
+/*CONTACTO*/
+@media (max-width: 768px){
+    main .info-contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+
+
+
+
+/*FOOTER*/
+
+@media (max-width: 768px) {
+    footer .caja-footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem;
+    }
+
+    footer .caja-footer .footer-seccion {
+        text-align: center;
+    }
+
+    footer .caja-footer .footer-seccion h2 {
+        margin-bottom: 3rem;
+        font-size: 25px;
+    }
+
+    footer .caja-footer .siguenos,
+    footer .caja-footer .horario,
+    footer .caja-footer .contactanos {
+        border-left: none;
+    }
+
+    footer .caja-footer .direccion h2 {
+        margin-bottom: 0;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid white;
+    }
+
+    footer .caja-footer .direccion p {
+        padding-top: 2rem;
+    }
+
+    footer .caja-footer .contactanos h2 {
+        border-top: 1px solid white;
+        padding-top: 3rem;
+    }
+
+    footer .caja-footer .horario h2 {
+        border-top: 1px solid white;
+        padding-top: 3rem;
+    }
+
+    footer .caja-footer .siguenos h2 {
+        border-top: 1px solid white;
+        padding-top: 3rem;
+    }
+}

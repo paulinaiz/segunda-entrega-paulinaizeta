@@ -1,0 +1,33 @@
+@mixin boton-base ($grosor, $tamano-letra, $texto-color){
+    font-family: $tipografia;
+    font-weight: $grosor;
+    font-size: $tamano-letra;
+    padding: 0.8rem;
+    background-color: map-get($colores, color-secundario);
+    color: $texto-color;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.04);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+
+@mixin h2($grosor, $tamano-letra, $texto-color){
+    font-family: $tipografia;
+    font-weight: $grosor;
+    font-size: $tamano-letra;
+    color: $texto-color;
+}
+
+@mixin textos($grosor, $tamano-letra, $texto-color){
+    font-family: $tipografia;
+    font-weight: $grosor;
+    font-size: $tamano-letra;
+    color: $texto-color;
+}
